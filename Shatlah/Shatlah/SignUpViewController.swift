@@ -153,14 +153,24 @@ class SignUpViewController: UIViewController {
                 print(error)
             }else{
                
-                let data : [String: Any] = ["firstName":self.firstName.text!,"lastName":self.lastName.text!,"email":self.email.text!,"userID":Auth.auth().currentUser!.uid , "displayName" : self.firstName.text!]
-                
+                let data : [String: Any] = ["firstName":self.firstName.text!,"lastName":self.lastName.text!,"email":self.email.text!,"userID":Auth.auth().currentUser!.uid]
+                if self.stste == false{
                 self.db.collection("Users").addDocument(data: data) { error in
                     if let error = error{
                         print(error)
                     }else{
                         let tabView = DashboardTabBarController()
                         self.navigationController?.present(tabView, animated: true, completion: nil)
+                    }
+                }
+                }else{
+                    self.db.collection("Mshatel").addDocument(data: data) { error in
+                        if let error = error{
+                            print(error)
+                        }else{
+                            let tabView = DashboardTabBarController()
+                            self.navigationController?.present(tabView, animated: true, completion: nil)
+                        }
                     }
                 }
             }
