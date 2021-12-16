@@ -152,9 +152,9 @@ class SignUpViewController: UIViewController {
             if let error = error{
                 print(error)
             }else{
-               
-                let data : [String: Any] = ["firstName":self.firstName.text!,"lastName":self.lastName.text!,"email":self.email.text!,"userID":Auth.auth().currentUser!.uid]
                 if self.stste == false{
+                let data : [String: Any] = ["firstName":self.firstName.text!,"lastName":self.lastName.text!,"email":self.email.text!,"userID":Auth.auth().currentUser!.uid]
+                
                 self.db.collection("Users").addDocument(data: data) { error in
                     if let error = error{
                         print(error)
@@ -163,16 +163,17 @@ class SignUpViewController: UIViewController {
                         self.navigationController?.present(tabView, animated: true, completion: nil)
                     }
                 }
-                }else{
-                    self.db.collection("Mshatel").addDocument(data: data) { error in
-                        if let error = error{
-                            print(error)
-                        }else{
-                            let tabView = DashboardTabBarController()
-                            self.navigationController?.present(tabView, animated: true, completion: nil)
-                        }
-                    }
-                }
+            }else if self.stste == true{
+                let data : [String: Any] = ["storeName":self.firstName.text!,"email":self.email.text!,"userID":Auth.auth().currentUser!.uid]
+                self.db.collection("Stores").addDocument(data: data) { error in
+                  if let error = error{
+                    print(error)
+                  }else{
+                    let tabView = DashboardTabBarController()
+                    self.navigationController?.present(tabView, animated: true, completion: nil)
+                  }
+                  }
+              }
             }
         }
     }
