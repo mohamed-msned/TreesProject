@@ -1,6 +1,6 @@
 import UIKit
 
-struct Store{
+struct Store {
   var storetName : String
   var storeEmail : String
   var storeID : String
