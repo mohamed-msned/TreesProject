@@ -67,7 +67,7 @@ class DescriptionViewController: UIViewController {
         $0.titleLabel?.font =  UIFont.systemFont(ofSize: 32, weight: .bold)
         $0.setTitle("Add", for: .normal)
         $0.translatesAutoresizingMaskIntoConstraints = false
-//        $0.addTarget(self, action: #selector(addButtonClicked), for: .touchDown)
+        $0.addTarget(self, action: #selector(addButtonClicked), for: .touchDown)
         return $0
     }(UIButton(type: .system))
     
@@ -94,8 +94,14 @@ class DescriptionViewController: UIViewController {
         
     }
     
-//    @objc func addButtonClicked() {
-//    }
+    @objc func addButtonClicked() {
+        let payment = PaymentViewController()
+        if let presentationController = payment.presentationController as? UISheetPresentationController {
+                    presentationController.detents = [.medium()] /// set here!
+                }
+                
+                self.present(payment, animated: true)
+    }
     
     
     
