@@ -13,18 +13,19 @@ class DescriptionViewController: UIViewController {
     var amount = 0
     
     lazy var treeImage: UIImageView = {
+        $0.contentMode = .scaleAspectFit
         $0.image = UIImage(systemName: "person")
         $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
         
     }(UIImageView())
     
-    lazy var descriptionTextView: UITextView = {
+    lazy var descriptionTextView: UILabel = {
         $0.text = "tesstt"
         $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
         
-    }(UITextView())
+    }(UILabel())
     
     lazy var numOfTreesLable: UILabel = {
         $0.text = "\(0)"
@@ -95,12 +96,10 @@ class DescriptionViewController: UIViewController {
     }
     
     @objc func addButtonClicked() {
-        let payment = PaymentViewController()
-        if let presentationController = payment.presentationController as? UISheetPresentationController {
-                    presentationController.detents = [.medium()] /// set here!
-                }
-                
-                self.present(payment, animated: true)
+        let vc = PaymentViewController()
+            let navController = UINavigationController(rootViewController: vc)
+//            navController.modalPresentationStyle = .fullScreen
+            present(navController, animated: true, completion: nil)
     }
     
     
@@ -111,31 +110,60 @@ class DescriptionViewController: UIViewController {
         [treeImage,descriptionTextView,priceLable, addButton,numOfTreesLable,plusButton,minusButton].forEach{view.addSubview($0)}
         
         NSLayoutConstraint.activate([
-            treeImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 150),
+            
+            treeImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 20),
+            
             treeImage.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 20),
+            treeImage.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -20),
             treeImage.heightAnchor.constraint(equalToConstant: 200),
-            treeImage.widthAnchor.constraint(equalToConstant: 200),
             
-            descriptionTextView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 150),
-            descriptionTextView.leadingAnchor.constraint(equalTo: treeImage.trailingAnchor, constant: 15),
-            descriptionTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -10),
-            descriptionTextView.heightAnchor.constraint(equalToConstant: 350),
-            descriptionTextView.widthAnchor.constraint(equalToConstant: 200),
+            descriptionTextView.topAnchor.constraint(equalTo: treeImage.bottomAnchor,constant: 20),
             
-            priceLable.topAnchor.constraint(equalTo: descriptionTextView.bottomAnchor,constant: 100),
-            priceLable.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 40),
+            descriptionTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -20),
             
-            numOfTreesLable.topAnchor.constraint(equalTo: priceLable.bottomAnchor,constant: 15),
-            numOfTreesLable.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            minusButton.topAnchor.constraint(equalTo: descriptionTextView.bottomAnchor,constant: 20),
+            minusButton.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 70),
             
-            plusButton.topAnchor.constraint(equalTo: numOfTreesLable.bottomAnchor,constant: 5),
-            plusButton.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 220),
+            numOfTreesLable.leadingAnchor.constraint(equalTo: minusButton.trailingAnchor,constant: 100),
+            numOfTreesLable.centerYAnchor.constraint(equalTo: minusButton.centerYAnchor),
             
-            minusButton.topAnchor.constraint(equalTo: numOfTreesLable.bottomAnchor,constant: 5),
-            minusButton.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 180),
+            plusButton.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -70),
             
-            addButton.topAnchor.constraint(equalTo: minusButton.bottomAnchor,constant: 40),
-            addButton.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 200),
+            plusButton.centerYAnchor.constraint(equalTo: numOfTreesLable.centerYAnchor),
+        
+            priceLable.topAnchor.constraint(equalTo: numOfTreesLable.bottomAnchor,constant: 10),
+            
+            priceLable.centerXAnchor.constraint(equalTo: numOfTreesLable.centerXAnchor),
+            
+            addButton.topAnchor.constraint(equalTo: priceLable.bottomAnchor,constant: 20),
+            addButton.centerXAnchor.constraint(equalTo:priceLable.centerXAnchor)
+            
+//            treeImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 150),
+//            treeImage.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 20),
+//            treeImage.heightAnchor.constraint(equalToConstant: 200),
+//            treeImage.widthAnchor.constraint(equalToConstant: 200),
+//
+//            descriptionTextView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 150),
+//            descriptionTextView.leadingAnchor.constraint(equalTo: treeImage.trailingAnchor, constant: 15),
+//            descriptionTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -10),
+//            descriptionTextView.heightAnchor.constraint(equalToConstant: 350),
+//            descriptionTextView.widthAnchor.constraint(equalToConstant: 200),
+//
+//            priceLable.topAnchor.constraint(equalTo: descriptionTextView.bottomAnchor,constant: 100),
+//            priceLable.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 40),
+//
+//            numOfTreesLable.topAnchor.constraint(equalTo: priceLable.bottomAnchor,constant: 15),
+//            numOfTreesLable.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//
+//            plusButton.topAnchor.constraint(equalTo: numOfTreesLable.bottomAnchor,constant: 5),
+//            plusButton.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 220),
+//
+//            minusButton.topAnchor.constraint(equalTo: numOfTreesLable.bottomAnchor,constant: 5),
+//            minusButton.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 180),
+//
+//            //addButton.topAnchor.constraint(equalTo: minusButton.bottomAnchor,constant: 40),
+//            addButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            addButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -20)
         ])
 }
 }

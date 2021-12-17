@@ -49,9 +49,10 @@ class TreesCollectionViewController: UIViewController {
   }
      func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
            
-         let vc = DescriptionViewController()
-         
-         vc.modalPresentationStyle = .fullScreen
-         present(vc, animated: true, completion: nil)
+         let payment = DescriptionViewController()
+                  if let presentationController = payment.presentationController as? UISheetPresentationController {
+                        presentationController.detents = [.medium()] /// set here!
+                     self.present(payment, animated: true)
+                      }
      }
  }

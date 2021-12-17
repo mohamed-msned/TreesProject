@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 //protocol UserDataDelegate {
 //    func userData(price: String, amountOftrees: String) {
@@ -14,6 +15,9 @@ import UIKit
 //    }
 //}
 class PaymentViewController: UIViewController {
+    
+    let db = Firestore.firestore()
+    var amountOftrees = 0
     
     lazy var treeImage: UIImageView = {
         $0.image = UIImage(systemName: "person")
@@ -89,6 +93,9 @@ class PaymentViewController: UIViewController {
         let alert = UIAlertController(title: "Thank you", message: "Your money has been recieved", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+        
+//        print(Auth.auth().currentUser?.uid)
+//        db.collection("Users").document(Auth.auth().currentUser!.uid).setData([ "anountOfTrees": amountOftrees + 1], merge: true)
     }
     
     private func setUpUI(){
@@ -123,7 +130,8 @@ class PaymentViewController: UIViewController {
             
             chatButton.topAnchor.constraint(equalTo: payButton.bottomAnchor,constant: 20),
             chatButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            chatButton.widthAnchor.constraint(equalToConstant: 200)
+            chatButton.widthAnchor.constraint(equalToConstant: 200),
+            chatButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -20)
         ])
 }
     
