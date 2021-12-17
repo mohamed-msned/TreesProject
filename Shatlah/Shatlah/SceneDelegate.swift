@@ -13,24 +13,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         FirebaseApp.configure()
-//        var rootViewController : UIViewController?
-//        if Auth.auth().currentUser?.uid == nil{
-//             rootViewController = LoginViewController()
-//        }else{
-//            rootViewController = DashboardTabBarController()
-//        }
-//        let navigationController = UINavigationController(rootViewController: rootViewController!)
-//        guard let windowScene = (scene as? UIWindowScene) else { return }
-//        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-//        window?.windowScene = windowScene
-//        window?.rootViewController = LoginViewController()
-//        window?.makeKeyAndVisible()
+        var rootViewController : UIViewController?
+        if Auth.auth().currentUser?.uid == nil{
+             rootViewController = LoginViewController()
+        }else{
+            rootViewController = DashboardTabBarController()
+        }
+        let navigationController = UINavigationController(rootViewController: rootViewController!)
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window?.windowScene = windowScene
+        window?.rootViewController = LoginViewController()
+        window?.makeKeyAndVisible()
 /////////////
-    guard let windowScene = (scene as? UIWindowScene) else { return }
-    let window = UIWindow(windowScene: windowScene)
-    window.rootViewController = UserProfileController()
-    window.makeKeyAndVisible()
-    self.window = window
+   
 }
       ///////////////
       //  guard let _ = (scene as? UIWindowScene) else { return }
