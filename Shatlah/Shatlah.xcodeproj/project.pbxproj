@@ -11,6 +11,9 @@
 		045ABFB4276B2A8500EA27A6 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045ABFB3276B2A8500EA27A6 /* PaymentViewController.swift */; };
 		045ABFB6276B4AF000EA27A6 /* StoreProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045ABFB5276B4AF000EA27A6 /* StoreProfileInfo.swift */; };
 		045ABFB8276B4B2200EA27A6 /* StoreProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045ABFB7276B4B2200EA27A6 /* StoreProfilePageViewController.swift */; };
+		3EE7AD64276D0B41008904F6 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE7AD63276D0B41008904F6 /* UserProfileController.swift */; };
+		3EE7AD66276D0B96008904F6 /* FetchUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE7AD65276D0B96008904F6 /* FetchUsers.swift */; };
+		3EE7AD68276D0BEF008904F6 /* animationscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE7AD67276D0BEF008904F6 /* animationscreen.swift */; };
 		88ED3798276A3E3A0040106F /* TreesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED3797276A3E3A0040106F /* TreesCollectionViewController.swift */; };
 		88ED379A276A3E790040106F /* TreesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED3799276A3E790040106F /* TreesCollectionViewCell.swift */; };
 		B82585C92769ECF9004D71B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82585C82769ECF9004D71B5 /* AppDelegate.swift */; };
@@ -35,6 +38,9 @@
 		045ABFB3276B2A8500EA27A6 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		045ABFB5276B4AF000EA27A6 /* StoreProfileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProfileInfo.swift; sourceTree = "<group>"; };
 		045ABFB7276B4B2200EA27A6 /* StoreProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProfilePageViewController.swift; sourceTree = "<group>"; };
+		3EE7AD63276D0B41008904F6 /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
+		3EE7AD65276D0B96008904F6 /* FetchUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUsers.swift; sourceTree = "<group>"; };
+		3EE7AD67276D0BEF008904F6 /* animationscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animationscreen.swift; sourceTree = "<group>"; };
 		88ED3797276A3E3A0040106F /* TreesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreesCollectionViewController.swift; sourceTree = "<group>"; };
 		88ED3799276A3E790040106F /* TreesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreesCollectionViewCell.swift; sourceTree = "<group>"; };
 		B82585C52769ECF9004D71B5 /* Shatlah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shatlah.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +100,9 @@
 				B82585D32769ECFB004D71B5 /* LaunchScreen.storyboard */,
 				B82585D62769ECFB004D71B5 /* Info.plist */,
 				B82585E22769F328004D71B5 /* GoogleService-Info.plist */,
+				3EE7AD67276D0BEF008904F6 /* animationscreen.swift */,
+				3EE7AD63276D0B41008904F6 /* UserProfileController.swift */,
+				3EE7AD65276D0B96008904F6 /* FetchUsers.swift */,
 				B82585DC2769ED60004D71B5 /* LoginViewController.swift */,
 				B82585DE2769EE7A004D71B5 /* SignUpViewController.swift */,
 				B82585E02769F027004D71B5 /* DashboardTabBarController.swift */,
@@ -196,9 +205,12 @@
 				B82585CD2769ECF9004D71B5 /* ViewController.swift in Sources */,
 				B82585C92769ECF9004D71B5 /* AppDelegate.swift in Sources */,
 				88ED3798276A3E3A0040106F /* TreesCollectionViewController.swift in Sources */,
+				3EE7AD66276D0B96008904F6 /* FetchUsers.swift in Sources */,
 				045ABFB4276B2A8500EA27A6 /* PaymentViewController.swift in Sources */,
+				3EE7AD64276D0B41008904F6 /* UserProfileController.swift in Sources */,
 				B82585CB2769ECF9004D71B5 /* SceneDelegate.swift in Sources */,
 				045ABFB8276B4B2200EA27A6 /* StoreProfilePageViewController.swift in Sources */,
+				3EE7AD68276D0BEF008904F6 /* animationscreen.swift in Sources */,
 				B82585E12769F027004D71B5 /* DashboardTabBarController.swift in Sources */,
 				B82585DF2769EE7A004D71B5 /* SignUpViewController.swift in Sources */,
 				88ED379A276A3E790040106F /* TreesCollectionViewCell.swift in Sources */,
@@ -351,7 +363,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H7HSH28V5D;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Shatlah/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -379,7 +391,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H7HSH28V5D;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Shatlah/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
