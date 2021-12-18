@@ -26,7 +26,7 @@ Description of the App :
 9- Eshraq Mohammed
 
 --------------------------------------------------------------------------
-main Objective:
+# main Objective:
 
 . the main objective of the application is to reduce the shortage of plants in the Kingdom of Saudi Arabia, by making the user take the initiative to buy a plant at a symbolic price in order to reduce the shortage of plants and revive the land and the environment, in solidarity with the Green Saudi Initiative.
 
@@ -39,7 +39,7 @@ problem definition and Soluation:
 . the Solution is Reducing the lack of plants by taking the initiative to plant trees by creating an application that provides this feature and treats this environmental problem in a simple and inexpensive way for the individual.
 
 --------------------------------------------------------------------------
-Functional Requirements:
+# Functional Requirements:
 
 1- The users shall determine whether he/she is a user or initiative plantation store. 
 
@@ -77,7 +77,7 @@ Functional Requirements:
 
 -------------------------------------------------------------------------
 
-Tools and techniques:
+# Tools and techniques:
 
 . Firebase 
 . Xcode program
@@ -87,7 +87,7 @@ Tools and techniques:
 
 --------------------------------------------------------------------------
 
-Third-Party:
+# Third-Party:
 
 . FireBase (using Authentication access for Sign up and Login - using firebase Store - using firebase database).
 . GitHub using to collect the teammembers classes And to final Submits the Project.
@@ -101,7 +101,7 @@ Feature Work:
 . we want to make the app is available in app store As soon 💪🏼
 
 
-Team roles:
+# Team roles:
 
 . Wejdan : create the User Profile page , animation page , app icon , Twitter account, read me file , and give the support to the team members
 
@@ -121,7 +121,7 @@ Team roles:
 
 . Sahab: Create the Chat page  between the customer and the store , and give the support to the team members.
 
-The Prototype:
+# The Prototype:
 
 
 ![b787d639-0703-4af2-a8cd-13d04ea45f8f](https://user-images.githubusercontent.com/92252951/146650886-f52eeb52-54bf-45ac-a96e-8afe71a2869c.JPG)
@@ -130,7 +130,7 @@ The Prototype:
 
 
 
-The App Video:
+# The App Video:
 
 
 
