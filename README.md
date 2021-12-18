@@ -80,9 +80,13 @@
 # Tools and techniques:
 
 . Firebase 
+
 . Xcode program
+
 . Google map 
+
 . create a Twitter account for the App
+
 . GitHub
 
 --------------------------------------------------------------------------
@@ -90,6 +94,7 @@
 # Third-Party:
 
 . FireBase (using Authentication access for Sign up and Login - using firebase Store - using firebase database).
+
 . GitHub using to collect the teammembers classes And to final Submits the Project.
 
 --------------------------------------------------------------------------
@@ -97,6 +102,7 @@
 # Challenges :
 
 .The Firebase account has been disabled for a while due to it's frequent use 
+
 .The difficulty of downloading the firebase package for some team members , We have deleted the repo and created a new repo to solve this problem
 
 --------------------------------------------------------------------------
