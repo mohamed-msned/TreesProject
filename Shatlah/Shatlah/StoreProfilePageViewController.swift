@@ -7,7 +7,6 @@ class StoreProfilePageViewController: UIViewController {
     let db = Firestore.firestore()
     let imagePicker = UIImagePickerController()
     let storage = Storage.storage()
-
     let containerView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(#colorLiteral(red: 0.2687272429, green: 0.3382961154, blue: 0.2888988853, alpha: 1))

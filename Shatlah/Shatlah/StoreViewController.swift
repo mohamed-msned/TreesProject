@@ -10,6 +10,8 @@ class StoreViewController: UIViewController {
      let tableView  = UITableView(frame: .zero, style: .insetGrouped)
      var imagesArr = [UIImage]()
      let storage = Storage.storage()
+    var storeID = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -58,7 +60,9 @@ class StoreViewController: UIViewController {
                     self.stores = []
                     for document in querySnapshot!.documents{
                         let data = document.data()
-                        self.stores.append(Store(storetName: data["storeName"] as? String ?? "NA", storeEmail: data["email"] as? String ?? "NA", userImageURL: data["userImageURL"] as? String ?? "NA"))
+                        self.stores.append(Store(storetName: data["storeName"] as? String ?? "NA", storeEmail: data["email"] as? String ?? "NA", storeID : data["userID"] as? String ?? "", userImageURL: data["userImageURL"] as? String ?? "NA"))
+//                        self.storeID = data["userID"] as! String
+                        
                         
                     }
                     DispatchQueue.main.async {
@@ -121,7 +125,10 @@ extension StoreViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let treeCV = TreesCollectionViewController()
-        treeCV.modalPresentationStyle = .fullScreen
+        
+      //  treeCV.modalPresentationStyle = .fullScreen
+        let id = stores[indexPath.row].storeID
+        treeCV.storeID = id!
         present(treeCV, animated: true, completion: nil)
     }
 }
@@ -149,3 +156,4 @@ extension StoreViewController: UISearchResultsUpdating, UISearchBarDelegate {
         }
     }
 }
+

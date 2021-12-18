@@ -3,6 +3,8 @@
 import UIKit
 import Firebase
 class TreesCollectionViewController: UIViewController {
+
+    var storeID = ""
   let db = Firestore.firestore()
   var trees = [NewTreeModel]()
   var treeCollectionView : UICollectionView? = nil
@@ -27,6 +29,7 @@ class TreesCollectionViewController: UIViewController {
     treeCollectionView!.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
     ])
      loadData()
+       print(storeID)
    }
   }
   extension TreesCollectionViewController : UICollectionViewDelegate, UICollectionViewDataSource{
@@ -35,7 +38,7 @@ class TreesCollectionViewController: UIViewController {
  }
  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
   let cell = treeCollectionView!.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! TreesCollectionViewCell
-   cell.treeImage.image = UIImage(named: "شتلة")
+   cell.treeImage.image = UIImage(named: "shatlah")
    cell.treeLable.text = trees[indexPath.item].newtreeName
    cell.priceLable.text = trees[indexPath.item].planetPrice
 //
@@ -48,7 +51,7 @@ class TreesCollectionViewController: UIViewController {
    }
     func loadData() {
       db.collection("newPlants")
-              .whereField("storeID", isEqualTo: Auth.auth().currentUser?.uid)
+            .whereField("storeID", isEqualTo: storeID)
               .getDocuments() {
                (querySnapshot, error) in
                if let error = error {
@@ -57,7 +60,7 @@ class TreesCollectionViewController: UIViewController {
                }else {
                 for document in querySnapshot!.documents {
                  let data = document.data()
-                 let name = data["planetName"] as! String ?? "_"
+                 let name = data["planetName"] as? String ?? "_"
                  let price = data["plantPrice"] as? String ?? "_"
                  let newTree = NewTreeModel(newtreeName: "الإسم:\(name)", plantDescription: "", planetPrice: "السعر:\(price)")
                  print("###################")
