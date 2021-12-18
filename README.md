@@ -32,7 +32,7 @@
 
 --------------------------------------------------------------------------
 
-problem definition and Soluation:
+# problem definition and Soluation:
 
 . The problem is the lack of plants in the Kingdom of Saudi Arabia and the pollution of the environment.
 
@@ -92,7 +92,8 @@ problem definition and Soluation:
 . FireBase (using Authentication access for Sign up and Login - using firebase Store - using firebase database).
 . GitHub using to collect the teammembers classes And to final Submits the Project.
 
-Feature Work:
+
+# Feature Work:
 
 . we can canceled the orders 
 . we can make the Archive of all customer orders 
