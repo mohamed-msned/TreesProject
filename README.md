@@ -92,8 +92,16 @@
 . FireBase (using Authentication access for Sign up and Login - using firebase Store - using firebase database).
 . GitHub using to collect the teammembers classes And to final Submits the Project.
 
+--------------------------------------------------------------------------
 
-# Feature Work:
+# Challenges :
+
+.The Firebase account has been disabled for a while due to it's frequent use 
+.The difficulty of downloading the firebase package for some team members , We have deleted the repo and created a new repo to solve this problem
+
+--------------------------------------------------------------------------
+
+# Future Work:
 
 . we can canceled the orders 
 . we can make the Archive of all customer orders 
@@ -101,6 +109,7 @@
 . We can prepare an order by pre-booking the user at any time he prefers
 . we want to make the app is available in app store As soon 💪🏼
 
+--------------------------------------------------------------------------
 
 # Team roles:
 
