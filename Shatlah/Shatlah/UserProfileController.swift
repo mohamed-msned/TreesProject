@@ -232,8 +232,8 @@ class UserProfileController: UIViewController {
     @objc func louOut(){
         
         let LoginViewController = LoginViewController()
-        let alert = UIAlertController(title: nil, message: "Are you sure you want to LogOut?", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Log out", style: .destructive) {_ in
+        let alert = UIAlertController(title: nil, message: "هل أنت متأكد تريد تسجيل الخروج ؟", preferredStyle: .alert)
+        let action = UIAlertAction(title: "تسجيل الخروج", style: .destructive) {_ in
             do {
                 try Auth.auth().signOut()
                 LoginViewController.modalPresentationStyle = .fullScreen
@@ -244,7 +244,7 @@ class UserProfileController: UIViewController {
         }
         
         alert.addAction(action)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "الغاء", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
         
     }

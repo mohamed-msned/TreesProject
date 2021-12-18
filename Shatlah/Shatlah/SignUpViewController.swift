@@ -177,7 +177,8 @@ class SignUpViewController: UIViewController {
         label.font = UIFont(name: "GillSans-Italic", size: 30)
         label.textColor = #colorLiteral(red: 0.2687272429, green: 0.3382961154, blue: 0.2888988853, alpha: 1)
         label.textAlignment = .center
-     //   view.addSubview(label) // XX
+        view.addSubview(label)
+        
         
         // check button
         view.addSubview(isServiceProvider)
@@ -226,7 +227,8 @@ class SignUpViewController: UIViewController {
                             print(error)
                         }else{
                             let tabView = DashboardTabBarController()
-                            self.navigationController?.present(tabView, animated: true, completion: nil)
+                            tabView.modalPresentationStyle = .fullScreen
+                            self.present(tabView, animated: true, completion: nil)
                         }
                     }
                 }else if self.stste == true{

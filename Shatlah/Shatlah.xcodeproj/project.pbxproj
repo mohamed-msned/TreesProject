@@ -11,6 +11,7 @@
 		045ABFB4276B2A8500EA27A6 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045ABFB3276B2A8500EA27A6 /* PaymentViewController.swift */; };
 		045ABFB6276B4AF000EA27A6 /* StoreProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045ABFB5276B4AF000EA27A6 /* StoreProfileInfo.swift */; };
 		045ABFB8276B4B2200EA27A6 /* StoreProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045ABFB7276B4B2200EA27A6 /* StoreProfilePageViewController.swift */; };
+		045ABFBA276E580F00EA27A6 /* NewTreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045ABFB9276E580F00EA27A6 /* NewTreeModel.swift */; };
 		3EE7AD64276D0B41008904F6 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE7AD63276D0B41008904F6 /* UserProfileController.swift */; };
 		3EE7AD66276D0B96008904F6 /* FetchUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE7AD65276D0B96008904F6 /* FetchUsers.swift */; };
 		3EE7AD68276D0BEF008904F6 /* animationscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE7AD67276D0BEF008904F6 /* animationscreen.swift */; };
@@ -31,6 +32,8 @@
 		B82585EA2769F388004D71B5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B82585E92769F388004D71B5 /* FirebaseStorage */; };
 		B82585F0276B0972004D71B5 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82585EF276B0972004D71B5 /* StoreCell.swift */; };
 		B82585F2276B09B5004D71B5 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82585F1276B09B5004D71B5 /* StoreViewController.swift */; };
+		B82585F6276C645E004D71B5 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82585F5276C645E004D71B5 /* StatisticsViewController.swift */; };
+		B825861C276D3E98004D71B5 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B825861B276D3E98004D71B5 /* MyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,7 @@
 		045ABFB3276B2A8500EA27A6 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		045ABFB5276B4AF000EA27A6 /* StoreProfileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProfileInfo.swift; sourceTree = "<group>"; };
 		045ABFB7276B4B2200EA27A6 /* StoreProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProfilePageViewController.swift; sourceTree = "<group>"; };
+		045ABFB9276E580F00EA27A6 /* NewTreeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTreeModel.swift; sourceTree = "<group>"; };
 		3EE7AD63276D0B41008904F6 /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		3EE7AD65276D0B96008904F6 /* FetchUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUsers.swift; sourceTree = "<group>"; };
 		3EE7AD67276D0BEF008904F6 /* animationscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animationscreen.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 		B82585E22769F328004D71B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B82585EF276B0972004D71B5 /* StoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
 		B82585F1276B09B5004D71B5 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		B82585F5276C645E004D71B5 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		B825861B276D3E98004D71B5 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,9 @@
 				045ABFB3276B2A8500EA27A6 /* PaymentViewController.swift */,
 				045ABFB5276B4AF000EA27A6 /* StoreProfileInfo.swift */,
 				045ABFB7276B4B2200EA27A6 /* StoreProfilePageViewController.swift */,
+				B82585F5276C645E004D71B5 /* StatisticsViewController.swift */,
+				B825861B276D3E98004D71B5 /* MyCell.swift */,
+				045ABFB9276E580F00EA27A6 /* NewTreeModel.swift */,
 			);
 			path = Shatlah;
 			sourceTree = "<group>";
@@ -201,9 +210,11 @@
 				B82585DD2769ED60004D71B5 /* LoginViewController.swift in Sources */,
 				B82585F0276B0972004D71B5 /* StoreCell.swift in Sources */,
 				B82585F2276B09B5004D71B5 /* StoreViewController.swift in Sources */,
+				B825861C276D3E98004D71B5 /* MyCell.swift in Sources */,
 				045ABFB0276A079900EA27A6 /* DescriptionViewController.swift in Sources */,
 				B82585CD2769ECF9004D71B5 /* ViewController.swift in Sources */,
 				B82585C92769ECF9004D71B5 /* AppDelegate.swift in Sources */,
+				B82585F6276C645E004D71B5 /* StatisticsViewController.swift in Sources */,
 				88ED3798276A3E3A0040106F /* TreesCollectionViewController.swift in Sources */,
 				3EE7AD66276D0B96008904F6 /* FetchUsers.swift in Sources */,
 				045ABFB4276B2A8500EA27A6 /* PaymentViewController.swift in Sources */,
@@ -212,6 +223,7 @@
 				045ABFB8276B4B2200EA27A6 /* StoreProfilePageViewController.swift in Sources */,
 				3EE7AD68276D0BEF008904F6 /* animationscreen.swift in Sources */,
 				B82585E12769F027004D71B5 /* DashboardTabBarController.swift in Sources */,
+				045ABFBA276E580F00EA27A6 /* NewTreeModel.swift in Sources */,
 				B82585DF2769EE7A004D71B5 /* SignUpViewController.swift in Sources */,
 				88ED379A276A3E790040106F /* TreesCollectionViewCell.swift in Sources */,
 				045ABFB6276B4AF000EA27A6 /* StoreProfileInfo.swift in Sources */,
