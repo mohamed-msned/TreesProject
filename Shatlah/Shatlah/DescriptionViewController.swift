@@ -8,9 +8,12 @@
 import Foundation
 import UIKit
 
+
+
 class DescriptionViewController: UIViewController {
     
     var amount = 0
+    var price = 7 
     
     lazy var treeImage: UIImageView = {
         $0.contentMode = .scaleAspectFit
@@ -34,7 +37,7 @@ class DescriptionViewController: UIViewController {
     }(UILabel())
     
     lazy var priceLable: UILabel = {
-        $0.text = "the price is 7"
+        $0.text = "the price is \(price)SR"
         $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UILabel())
@@ -96,10 +99,14 @@ class DescriptionViewController: UIViewController {
     }
     
     @objc func addButtonClicked() {
+        
         let vc = PaymentViewController()
+        vc.amountOfTrees = amount
+        vc.totalPrice = price
             let navController = UINavigationController(rootViewController: vc)
 //            navController.modalPresentationStyle = .fullScreen
             present(navController, animated: true, completion: nil)
+        
     }
     
     

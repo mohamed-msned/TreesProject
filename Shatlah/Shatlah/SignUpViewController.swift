@@ -214,43 +214,34 @@ class SignUpViewController: UIViewController {
     @objc private func signUpInBtnClick(){
         Auth.auth().createUser(withEmail: email.text!, password: password.text!) { result, error in
             if let error = error{
-                print(error)
+                print("error while creating user")
+                print(error.localizedDescription)
             }else{
                 if self.stste == false {
-                    let data : [String: Any] = ["fullName":self.fullName.text!,"email":self.email.text!,"userID":Auth.auth().currentUser!.uid , "displayName" : self.fullName.text!]
+                    let data : [String: Any] = ["fullName":self.fullName.text!,"email":self.email.text!,"userID":Auth.auth().currentUser!.uid, "displayName" : self.fullName.text!, "totalAmountOftrees": 0]
                     
                     self.db.collection("Users").addDocument(data: data) { error in
                         if let error = error{
+                            print("error while creating user")
                             print(error)
                         }else{
                             let tabView = DashboardTabBarController()
                             self.navigationController?.present(tabView, animated: true, completion: nil)
                         }
                     }
-                }else{
-                    if self.stste == false{
-                        let data : [String: Any] = ["fullName":self.fullName.text!,"email":self.email.text!,"userID":Auth.auth().currentUser!.uid, "isStore" : false ]
-                        self.db.collection("Users").addDocument(data: data) { error in
-                            if let error = error{
-                                print(error)
-                            }else{
-                                let tabView = DashboardTabBarController()
-                                self.navigationController?.present(tabView, animated: true, completion: nil)
-                            }
-                        }
-                    }else if self.stste == true{
-                        let data : [String: Any] = ["storeName":self.fullName.text!,"email":self.email.text!,"userID":Auth.auth().currentUser!.uid,"isStore" : true]
-                        self.db.collection("Stores").addDocument(data: data) { error in
-                            if let error = error{
-                                print(error)
-                            }else{
-                                let tabView = DashboardTabBarController()
-                                self.navigationController?.present(tabView, animated: true, completion: nil)
-                            }
+                }else if self.stste == true{
+                    let data : [String: Any] = ["storeName":self.fullName.text!,"email":self.email.text!,"userID":Auth.auth().currentUser!.uid,"isStore" : true]
+                    self.db.collection("Stores").addDocument(data: data) { error in
+                        if let error = error{
+                            print("error while creating store")
+                            print(error)
+                        }else{
+                            let tabView = StoreProfilePageViewController()
+                            self.navigationController?.present(tabView, animated: true, completion: nil)
                         }
                     }
                 }
-                
+
             }
         }
     }
