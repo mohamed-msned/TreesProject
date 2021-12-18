@@ -95,7 +95,7 @@ Feature Work:
 
 . we can canceled the orders 
 . we can make the Archive of all customer orders 
-. we can add the more Kind of Plans 
+. we can add the more Kind of Plants
 . We can prepare an order by pre-booking the user at any time he prefers
 . we want to make the app is available in app store As soon 💪🏼
 
