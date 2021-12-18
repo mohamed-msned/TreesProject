@@ -8,14 +8,23 @@ Description of the App :
 Team members:
 
 1- wejdan ibrahim 
+
 2- Amal Rashed
+
 3- Mohammed Ali
+
 4- Taraf Abdullah
+
 5- Abdullah Ali
+
 6- Areej Mohammed(Lead)
+
 7- Noura Ibrahim
+
 8- Sahab Mubarak
+
 9- Eshraq Mohammed
+
 --------------------------------------------------------------------------
 main Objective:
 
