@@ -86,10 +86,10 @@ class UserProfileController: UIViewController {
             userEmail.heightAnchor.constraint(equalToConstant: 50),
             userEmail.widthAnchor.constraint(equalToConstant: 200),
             //
-            numorder.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 500),
-            numorder.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 130),
-            numorder.heightAnchor.constraint(equalToConstant: 30),
-            numorder.widthAnchor.constraint(equalToConstant: 160),
+            numorder.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 480),
+            numorder.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 150),
+            numorder.heightAnchor.constraint(equalToConstant: 50),
+            numorder.widthAnchor.constraint(equalToConstant: 200),
             //
             contact.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 550),
             contact.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 130),
@@ -182,15 +182,12 @@ class UserProfileController: UIViewController {
         return nameuser
     }()
     
-    let numorder : UIButton = {
-        let numorder = UIButton()
+    let numorder : UILabel = {
+        let numorder = UILabel()
         numorder.translatesAutoresizingMaskIntoConstraints = false
-        numorder.backgroundColor = #colorLiteral(red: 0.2687272429, green: 0.3382961154, blue: 0.2888988853, alpha: 1)
-        numorder.setTitle("عدد الطلبات ٢", for: .normal)
-        numorder.setTitleColor(.white, for: .normal)
-        numorder.layer.cornerRadius = 15
-        numorder.titleLabel?.font = UIFont(name: "GillSans-Italic", size: 20)
-        numorder.addTarget(self, action: #selector(order), for: .touchDown)
+        numorder.textColor = #colorLiteral(red: 0.2687272429, green: 0.3382961154, blue: 0.2888988853, alpha: 1)
+        numorder.text = "عدد الطلبات ٢"
+        numorder.font = .italicSystemFont(ofSize: 20)
         return numorder
     }()
     
@@ -223,11 +220,7 @@ class UserProfileController: UIViewController {
         openUrl(url: "https://twitter.com/shatlah__app")
         
     }
-    //buttonacttion
-    @objc func order(){
-        // بتفتح صفحه الاحصائيات عشان تعرض ترتيب الشخص او..
-    }
-    
+
     //buttonacttion
     @objc func louOut(){
         

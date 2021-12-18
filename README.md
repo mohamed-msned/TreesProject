@@ -80,20 +80,34 @@
 # Tools and techniques:
 
 . Firebase 
+
 . Xcode program
-. Google map 
-. create a Twitter account for the App
-. GitHub
+
+. Apple Maps 
+
+. Use the application Twitter account link within the App
+
+. GitHub using to collect the teammembers classes And to final Submits the Project.
 
 --------------------------------------------------------------------------
 
-# Third-Party:
+# Third-Party-Libraries :
 
 . FireBase (using Authentication access for Sign up and Login - using firebase Store - using firebase database).
-. GitHub using to collect the teammembers classes And to final Submits the Project.
 
+. MapKit
 
-# Feature Work:
+--------------------------------------------------------------------------
+
+# Challenges :
+
+.The Firebase account has been disabled for a while due to it's frequent use 
+
+.The difficulty of downloading the firebase package for some team members , We have deleted the repo and created a new repo to solve this problem
+
+--------------------------------------------------------------------------
+
+# Future Work:
 
 . we can canceled the orders 
 . we can make the Archive of all customer orders 
@@ -101,6 +115,7 @@
 . We can prepare an order by pre-booking the user at any time he prefers
 . we want to make the app is available in app store As soon 💪🏼
 
+--------------------------------------------------------------------------
 
 # Team roles:
 

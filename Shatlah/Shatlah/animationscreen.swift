@@ -11,7 +11,7 @@ class animationscreen: UIViewController {
         let label1 = UILabel()
         let imageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
-        imageView.image = UIImage(named: "trees4")
+        imageView.image = UIImage(named: "sha")
         return imageView
     }()
     override func viewDidLoad() {
@@ -21,11 +21,11 @@ class animationscreen: UIViewController {
         view.addSubview(imageView)
         
         label1.frame = CGRect(x: 50, y: 100, width: 300, height: 100)
-        label1.text = "قال ﷺ:إِنْ قَامَتِ السَّاعَةُ وَفِي يَدِ أَحَدِكُمْ فَسِيلَةٌ،فَلْيَغْرِسْهَا"
+        label1.text = "قال ﷺ:{إِنْ قَامَتِ السَّاعَةُ وَفِي يَدِ أَحَدِكُمْ فَسِيلَةٌ،فَلْيَغْرِسْهَا}"
         label1.textAlignment = .center
         label1.textColor = #colorLiteral(red: 0.5787474513, green: 0.3215198815, blue: 0, alpha: 1)
         label1.numberOfLines = 2
-        label1.font = .systemFont(ofSize: 18)
+        label1.font = .systemFont(ofSize: 20)
         view.addSubview(label1)
         
     }
