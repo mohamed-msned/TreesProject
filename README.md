@@ -83,19 +83,19 @@
 
 . Xcode program
 
-. Google map 
+. Apple Maps 
 
-. create a Twitter account for the App
+. Use the application Twitter account link within the App
 
-. GitHub
+. GitHub using to collect the teammembers classes And to final Submits the Project.
 
 --------------------------------------------------------------------------
 
-# Third-Party:
+# Third-Party-Libraries :
 
 . FireBase (using Authentication access for Sign up and Login - using firebase Store - using firebase database).
 
-. GitHub using to collect the teammembers classes And to final Submits the Project.
+. MapKit
 
 --------------------------------------------------------------------------
 
