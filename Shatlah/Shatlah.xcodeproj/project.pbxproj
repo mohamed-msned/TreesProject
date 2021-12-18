@@ -28,6 +28,8 @@
 		B82585EA2769F388004D71B5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B82585E92769F388004D71B5 /* FirebaseStorage */; };
 		B82585F0276B0972004D71B5 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82585EF276B0972004D71B5 /* StoreCell.swift */; };
 		B82585F2276B09B5004D71B5 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82585F1276B09B5004D71B5 /* StoreViewController.swift */; };
+		B82585F6276C645E004D71B5 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82585F5276C645E004D71B5 /* StatisticsViewController.swift */; };
+		B825861C276D3E98004D71B5 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B825861B276D3E98004D71B5 /* MyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		B82585E22769F328004D71B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B82585EF276B0972004D71B5 /* StoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
 		B82585F1276B09B5004D71B5 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		B82585F5276C645E004D71B5 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		B825861B276D3E98004D71B5 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				045ABFB3276B2A8500EA27A6 /* PaymentViewController.swift */,
 				045ABFB5276B4AF000EA27A6 /* StoreProfileInfo.swift */,
 				045ABFB7276B4B2200EA27A6 /* StoreProfilePageViewController.swift */,
+				B82585F5276C645E004D71B5 /* StatisticsViewController.swift */,
+				B825861B276D3E98004D71B5 /* MyCell.swift */,
 			);
 			path = Shatlah;
 			sourceTree = "<group>";
@@ -192,9 +198,11 @@
 				B82585DD2769ED60004D71B5 /* LoginViewController.swift in Sources */,
 				B82585F0276B0972004D71B5 /* StoreCell.swift in Sources */,
 				B82585F2276B09B5004D71B5 /* StoreViewController.swift in Sources */,
+				B825861C276D3E98004D71B5 /* MyCell.swift in Sources */,
 				045ABFB0276A079900EA27A6 /* DescriptionViewController.swift in Sources */,
 				B82585CD2769ECF9004D71B5 /* ViewController.swift in Sources */,
 				B82585C92769ECF9004D71B5 /* AppDelegate.swift in Sources */,
+				B82585F6276C645E004D71B5 /* StatisticsViewController.swift in Sources */,
 				88ED3798276A3E3A0040106F /* TreesCollectionViewController.swift in Sources */,
 				045ABFB4276B2A8500EA27A6 /* PaymentViewController.swift in Sources */,
 				B82585CB2769ECF9004D71B5 /* SceneDelegate.swift in Sources */,

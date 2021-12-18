@@ -20,7 +20,7 @@ class DashboardTabBarController: UITabBarController, UITabBarControllerDelegate 
        // posts.getPosts()
        // let item1 = TimelineViewController()
        // let item2 = UsersViewController()
-//        let item3 = NewPostViewController()
+        let item3 = StatisticsViewController()
        // let item4 = ProfileViewController()
 
         
@@ -31,15 +31,15 @@ class DashboardTabBarController: UITabBarController, UITabBarControllerDelegate 
       //      item2.tabBarItem = icon2
         
         
-        let icon3 = UITabBarItem(title: "New Post", image: UIImage(systemName: "plus.rectangle"), selectedImage: UIImage(systemName: "plus.rectangle.fill"))
-       //     item3.tabBarItem = icon3
+        let icon3 = UITabBarItem(title: "Statistics", image: UIImage(systemName: "chart.xyaxis.line"), selectedImage: UIImage(systemName: "chart.xyaxis.line"))
+           item3.tabBarItem = icon3
         
         let icon4 = UITabBarItem(title: "Grids", image: UIImage(systemName: "rectangle.grid.2x2"), selectedImage: UIImage(systemName: "rectangle.grid.2x2.fill"))
       //  item4.tabBarItem = icon4
       
        
-       // let controllers = [item1,item2,item3,item4]
-//        self.viewControllers = controllers
+        let controllers = [item3]
+        self.viewControllers = controllers
         
     }
 
