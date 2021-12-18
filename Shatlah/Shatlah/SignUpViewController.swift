@@ -239,7 +239,7 @@ class SignUpViewController: UIViewController {
                             print(error)
                         }else{
                             let tabView = StoreProfilePageViewController()
-                            self.navigationController?.present(tabView, animated: true, completion: nil)
+                            self.present(tabView, animated: true, completion: nil)
                         }
                     }
                 }

@@ -85,7 +85,7 @@ class PaymentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .darkGray
+        view.backgroundColor = .white
         setUpUI()
         readTotalAmount()
         
@@ -94,7 +94,11 @@ class PaymentViewController: UIViewController {
 
     @objc func applePayBtnClicked() {
         let alert = UIAlertController(title: "Thank you", message: "Your money has been recieved", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {_ in
+            let db = DashboardTabBarController()
+            db.modalPresentationStyle = .fullScreen
+            self.present(db, animated: true, completion: nil)
+        }))
         self.present(alert, animated: true, completion: nil)
         
 //        print(Auth.auth().currentUser?.uid)

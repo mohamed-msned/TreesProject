@@ -15,6 +15,14 @@ class StoreProfilePageViewController: UIViewController {
         view.clipsToBounds = true
         return view
     }()
+    
+    lazy var addBtn : UIButton = {
+        let add = UIButton()
+        $0.setTitle("Add", for: .normal)
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.addTarget(self, action: #selector(addPlanet), for: .touchDown)
+        return $0
+    }(UIButton(type: .system))
 
     let profileImage: UIImageView = {
         let pI = UIImageView()
@@ -104,9 +112,12 @@ class StoreProfilePageViewController: UIViewController {
         userEmailLabel.centerXAnchor.constraint(equalTo: containerView.centerXAnchor).isActive = true
         userEmailLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 3).isActive = true
 
+        containerView.addSubview(addBtn)
+        addBtn.topAnchor.constraint(equalTo:userEmailLabel.bottomAnchor, constant: 20).isActive = true
+        addBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         containerView.addSubview(signOutButton)
 
-        signOutButton.topAnchor.constraint(equalTo: userEmailLabel.bottomAnchor, constant: 20).isActive = true
+        signOutButton.topAnchor.constraint(equalTo: addBtn.bottomAnchor, constant: 20).isActive = true
         signOutButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20).isActive = true
         signOutButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20).isActive = true
         signOutButton.heightAnchor.constraint(equalToConstant: 45).isActive = true
@@ -144,7 +155,9 @@ class StoreProfilePageViewController: UIViewController {
             }
         }
     }
-
+    @objc func addPlanet(){
+        let postvc = PostViewController()
+        present(postvc, animated: true, completion: nil)}
     private func readImageFromFirestore(){
         guard let currentUser = Auth.auth().currentUser else {return}
 

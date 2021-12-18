@@ -203,20 +203,22 @@ var firstOne = ""
 
 extension StatisticsViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyCell
         cell.nameLable.text = "عبدالله"
-        count+=1
+            count+=1
         cell.placeLabel.text = ".\(count)"
+        
         firstPlaceName.text = users.sorted(by:{$0.totalAmountOftrees > $1.totalAmountOftrees})[0].fullName
         secondPlaceName.text = users.sorted(by:{$0.totalAmountOftrees > $1.totalAmountOftrees})[1].fullName
         thirdPlaceName.text = users.sorted(by:{$0.totalAmountOftrees > $1.totalAmountOftrees})[2].fullName
         cell.nameLable.text = users.sorted(by:{$0.totalAmountOftrees > $1.totalAmountOftrees})[indexPath.row].fullName
         cell.plantsCount.text = String(users.sorted(by:{$0.totalAmountOftrees > $1.totalAmountOftrees})[indexPath.row].totalAmountOftrees)
-    
+      
         cell.plant.image = UIImage(systemName: "leaf.fill")
         return cell
     }

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct NewTreeModel{
+struct NewTreeModel {
   var newtreeName : String
   var plantDescription : String?
   var planetPrice : String?

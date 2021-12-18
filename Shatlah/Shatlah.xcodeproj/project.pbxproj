@@ -12,6 +12,9 @@
 		045ABFB6276B4AF000EA27A6 /* StoreProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045ABFB5276B4AF000EA27A6 /* StoreProfileInfo.swift */; };
 		045ABFB8276B4B2200EA27A6 /* StoreProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045ABFB7276B4B2200EA27A6 /* StoreProfilePageViewController.swift */; };
 		045ABFBA276E580F00EA27A6 /* NewTreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045ABFB9276E580F00EA27A6 /* NewTreeModel.swift */; };
+		045ABFBD276E6F3400EA27A6 /* StoreCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045ABFBC276E6F3400EA27A6 /* StoreCollectionView.swift */; };
+		045ABFBF276E6FD900EA27A6 /* StoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045ABFBE276E6FD900EA27A6 /* StoreCollectionViewCell.swift */; };
+		045ABFC1276E705100EA27A6 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045ABFC0276E705100EA27A6 /* PostViewController.swift */; };
 		3EE7AD64276D0B41008904F6 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE7AD63276D0B41008904F6 /* UserProfileController.swift */; };
 		3EE7AD66276D0B96008904F6 /* FetchUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE7AD65276D0B96008904F6 /* FetchUsers.swift */; };
 		3EE7AD68276D0BEF008904F6 /* animationscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE7AD67276D0BEF008904F6 /* animationscreen.swift */; };
@@ -42,6 +45,9 @@
 		045ABFB5276B4AF000EA27A6 /* StoreProfileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProfileInfo.swift; sourceTree = "<group>"; };
 		045ABFB7276B4B2200EA27A6 /* StoreProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProfilePageViewController.swift; sourceTree = "<group>"; };
 		045ABFB9276E580F00EA27A6 /* NewTreeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTreeModel.swift; sourceTree = "<group>"; };
+		045ABFBC276E6F3400EA27A6 /* StoreCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCollectionView.swift; sourceTree = "<group>"; };
+		045ABFBE276E6FD900EA27A6 /* StoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCollectionViewCell.swift; sourceTree = "<group>"; };
+		045ABFC0276E705100EA27A6 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		3EE7AD63276D0B41008904F6 /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		3EE7AD65276D0B96008904F6 /* FetchUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUsers.swift; sourceTree = "<group>"; };
 		3EE7AD67276D0BEF008904F6 /* animationscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animationscreen.swift; sourceTree = "<group>"; };
@@ -123,6 +129,9 @@
 				B82585F5276C645E004D71B5 /* StatisticsViewController.swift */,
 				B825861B276D3E98004D71B5 /* MyCell.swift */,
 				045ABFB9276E580F00EA27A6 /* NewTreeModel.swift */,
+				045ABFBC276E6F3400EA27A6 /* StoreCollectionView.swift */,
+				045ABFBE276E6FD900EA27A6 /* StoreCollectionViewCell.swift */,
+				045ABFC0276E705100EA27A6 /* PostViewController.swift */,
 			);
 			path = Shatlah;
 			sourceTree = "<group>";
@@ -212,8 +221,10 @@
 				B82585F2276B09B5004D71B5 /* StoreViewController.swift in Sources */,
 				B825861C276D3E98004D71B5 /* MyCell.swift in Sources */,
 				045ABFB0276A079900EA27A6 /* DescriptionViewController.swift in Sources */,
+				045ABFBD276E6F3400EA27A6 /* StoreCollectionView.swift in Sources */,
 				B82585CD2769ECF9004D71B5 /* ViewController.swift in Sources */,
 				B82585C92769ECF9004D71B5 /* AppDelegate.swift in Sources */,
+				045ABFC1276E705100EA27A6 /* PostViewController.swift in Sources */,
 				B82585F6276C645E004D71B5 /* StatisticsViewController.swift in Sources */,
 				88ED3798276A3E3A0040106F /* TreesCollectionViewController.swift in Sources */,
 				3EE7AD66276D0B96008904F6 /* FetchUsers.swift in Sources */,
@@ -222,6 +233,7 @@
 				B82585CB2769ECF9004D71B5 /* SceneDelegate.swift in Sources */,
 				045ABFB8276B4B2200EA27A6 /* StoreProfilePageViewController.swift in Sources */,
 				3EE7AD68276D0BEF008904F6 /* animationscreen.swift in Sources */,
+				045ABFBF276E6FD900EA27A6 /* StoreCollectionViewCell.swift in Sources */,
 				B82585E12769F027004D71B5 /* DashboardTabBarController.swift in Sources */,
 				045ABFBA276E580F00EA27A6 /* NewTreeModel.swift in Sources */,
 				B82585DF2769EE7A004D71B5 /* SignUpViewController.swift in Sources */,
