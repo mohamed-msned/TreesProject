@@ -1,4 +1,4 @@
-(Shatlah App 🪴) :
+# Shatlah App 🪴 
 
 # Description of the App :
 
