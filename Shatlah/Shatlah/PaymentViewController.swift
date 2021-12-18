@@ -7,13 +7,19 @@
 
 import Foundation
 import UIKit
+import Firebase
 
-//protocol UserDataDelegate {
-//    func userData(price: String, amountOftrees: String) {
-//        
-//    }
-//}
+
+
+
 class PaymentViewController: UIViewController {
+    
+    
+    let db = Firestore.firestore()
+    var totalAmountOftrees = 0
+    var amountOfTrees = 0
+    var totalPrice = 0
+    let vc = DescriptionViewController()
     
     lazy var treeImage: UIImageView = {
         $0.image = UIImage(systemName: "person")
@@ -23,13 +29,13 @@ class PaymentViewController: UIViewController {
     }(UIImageView())
     
     lazy var priceLable: UILabel = {
-        $0.text = "the price is 7"
+        $0.text = "Total price is \(totalPrice * amountOfTrees)"
         $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UILabel())
     
     lazy var numberOfTreesLable: UILabel = {
-        $0.text = "number of trees 1"
+        $0.text = "number of trees \(amountOfTrees)"
         $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UILabel())
@@ -81,6 +87,7 @@ class PaymentViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .darkGray
         setUpUI()
+        readTotalAmount()
         
     }
     
@@ -89,7 +96,64 @@ class PaymentViewController: UIViewController {
         let alert = UIAlertController(title: "Thank you", message: "Your money has been recieved", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+        
+//        print(Auth.auth().currentUser?.uid)
+
+        
+//        db.collection("Users")
+//            .whereField("userID", isEqualTo: Auth.auth().currentUser!.uid)
+//                    .getDocuments() {
+//
+//                        (querySnapshot, error) in
+//                        if let error = error {
+//                            print(error.localizedDescription)
+//                        }else {
+//                            for document in querySnapshot!.documents {
+//                                let data = document.data()
+////                                print(data["totalAmountOftrees"] as! Int )
+//                                self.totalAmountOftrees = data["totalAmountOftrees"] as! Int
+////                                print(self.totalAmountOftrees)
+//                            }
+//                        }
+//                    }
+        
+//        print("###########")
+//        print(totalAmountOftrees)
+        let newData = ["totalAmountOftrees" : totalAmountOftrees + amountOfTrees]
+//                        let db = Firestore.firestore()
+                        db.collection("Users").whereField("userID", isEqualTo: Auth.auth().currentUser?.uid as Any).getDocuments { (result, error) in
+                            if error == nil{
+                                for document in result!.documents{
+                                    //document.setValue(“1", forKey: “isolationDate”)
+                                    self.db.collection("Users").document(document.documentID).setData(newData , merge: true)
+                                }
+                            }
+                        }
+                    }
+//        db.collection("Users").document(Auth.auth().currentUser!.uid).setData([ "totalAmountOftrees": totalAmountOftrees + amountOfTrees], merge: true)
+//    }
+    func readTotalAmount() {
+        db.collection("Users")
+            .whereField("userID", isEqualTo: Auth.auth().currentUser!.uid)
+                    .getDocuments() {
+
+                        (querySnapshot, error) in
+                        if let error = error {
+                            print(error.localizedDescription)
+                        }else {
+                            for document in querySnapshot!.documents {
+                                let data = document.data()
+//                                print(data["totalAmountOftrees"] as! Int )
+                                self.totalAmountOftrees = data["totalAmountOftrees"] as! Int
+//                                print(self.totalAmountOftrees)
+                            }
+                        }
+                    }
+        
     }
+    
+    
+    
     
     private func setUpUI(){
         [treeImage, priceLable,numberOfTreesLable, payButton, chatButton].forEach{view.addSubview($0)}
@@ -123,7 +187,8 @@ class PaymentViewController: UIViewController {
             
             chatButton.topAnchor.constraint(equalTo: payButton.bottomAnchor,constant: 20),
             chatButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            chatButton.widthAnchor.constraint(equalToConstant: 200)
+            chatButton.widthAnchor.constraint(equalToConstant: 200),
+            chatButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -20)
         ])
 }
     

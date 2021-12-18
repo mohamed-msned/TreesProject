@@ -23,13 +23,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
+
         window?.rootViewController = DashboardTabBarController()
+
         window?.makeKeyAndVisible()
-        
-        
-        
+/////////////
+   
+}
+      ///////////////
       //  guard let _ = (scene as? UIWindowScene) else { return }
-    }
+
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
@@ -58,7 +61,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
+
+
 
