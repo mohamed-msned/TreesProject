@@ -87,4 +87,9 @@ extension StoreViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let treeCV = TreesCollectionViewController()
+        treeCV.modalPresentationStyle = .fullScreen
+        present(treeCV, animated: true, completion: nil)
+    }
 }

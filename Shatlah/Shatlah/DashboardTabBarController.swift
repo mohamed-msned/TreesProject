@@ -18,27 +18,27 @@ class DashboardTabBarController: UITabBarController, UITabBarControllerDelegate 
         super.viewWillAppear(animated)
         view.backgroundColor = .darkGray
        // posts.getPosts()
-       // let item1 = TimelineViewController()
-       // let item2 = UsersViewController()
+        let item1 = StoreViewController()
+        let item2 = UserProfileController()
         let item3 = StatisticsViewController()
        // let item4 = ProfileViewController()
 
         
-        let icon1 = UITabBarItem(title: "Timeline", image: UIImage(systemName: "timelapse"), selectedImage: UIImage(systemName: "timelapse"))
-    //        item1.tabBarItem = icon1
+        let icon1 = UITabBarItem(title: "متاجر", image: UIImage(systemName: "cart"), selectedImage: UIImage(systemName: "cart"))
+            item1.tabBarItem = icon1
         
-        let icon2 = UITabBarItem(title: "Messeges", image: UIImage(systemName: "tray"), selectedImage: UIImage(systemName: "tray.fill"))
-      //      item2.tabBarItem = icon2
+        let icon2 = UITabBarItem(title: "الحساب", image: UIImage(systemName: "person.fill"), selectedImage: UIImage(systemName: "person.fill"))
+            item2.tabBarItem = icon2
         
         
-        let icon3 = UITabBarItem(title: "Statistics", image: UIImage(systemName: "chart.xyaxis.line"), selectedImage: UIImage(systemName: "chart.xyaxis.line"))
+        let icon3 = UITabBarItem(title: "الإحصائيات", image: UIImage(systemName: "chart.xyaxis.line"), selectedImage: UIImage(systemName: "chart.xyaxis.line"))
            item3.tabBarItem = icon3
         
-        let icon4 = UITabBarItem(title: "Grids", image: UIImage(systemName: "rectangle.grid.2x2"), selectedImage: UIImage(systemName: "rectangle.grid.2x2.fill"))
-      //  item4.tabBarItem = icon4
+//        let icon4 = UITabBarItem(title: "Grids", image: UIImage(systemName: "rectangle.grid.2x2"), selectedImage: UIImage(systemName: "rectangle.grid.2x2.fill"))
+//      //  item4.tabBarItem = icon4
       
        
-        let controllers = [item3]
+        let controllers = [item2,item3,item1]
         self.viewControllers = controllers
         
     }
