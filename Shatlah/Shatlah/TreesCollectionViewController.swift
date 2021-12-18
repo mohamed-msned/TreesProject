@@ -1,58 +1,74 @@
-//
-//  TreesCollectionViewController.swift
-//  Shatlah
-//
-//  Created by Nora on 11/05/1443 AH.
-//
+
 
 import UIKit
-
+import Firebase
 class TreesCollectionViewController: UIViewController {
 
-    var images = [""]
-     var imagesCollectionView : UICollectionView? = nil
-    
-     override var prefersStatusBarHidden: Bool {
-       return true
-     }
-    
-     override func viewDidLoad() {
-       super.viewDidLoad()
-       let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
- //        layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-           layout.itemSize = CGSize(width: 150, height: 150)
-       imagesCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-       imagesCollectionView!.backgroundColor = UIColor.white
-       imagesCollectionView!.dataSource = self
-       imagesCollectionView!.delegate = self
-       imagesCollectionView!.register(TreesCollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
-       view.addSubview(imagesCollectionView!)
-       NSLayoutConstraint.activate([
-         imagesCollectionView!.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-         imagesCollectionView!.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-         imagesCollectionView!.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-         imagesCollectionView!.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-       ])
-     }
+    var storeID = ""
+  let db = Firestore.firestore()
+  var trees = [NewTreeModel]()
+  var treeCollectionView : UICollectionView? = nil
+   override var prefersStatusBarHidden: Bool {
+    return true
    }
-
-   extension TreesCollectionViewController : UICollectionViewDelegate, UICollectionViewDataSource{
-   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 51
+   override func viewDidLoad() {
+    super.viewDidLoad()
+    let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+     layout.sectionInset = UIEdgeInsets(top: 20, left: 30, bottom: 10, right: 30)
+     layout.itemSize = CGSize(width: 160, height: 160)
+     treeCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+     treeCollectionView!.backgroundColor = UIColor.white
+     treeCollectionView!.dataSource = self
+     treeCollectionView!.delegate = self
+     treeCollectionView!.register(TreesCollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+    view.addSubview(treeCollectionView!)
+    NSLayoutConstraint.activate([
+    treeCollectionView!.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+    treeCollectionView!.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+    treeCollectionView!.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+    treeCollectionView!.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+    ])
+     loadData()
+       print(storeID)
+   }
   }
-  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = imagesCollectionView!.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! TreesCollectionViewCell
-      cell.backgroundColor = .lightGray
-      cell.imageView.image = UIImage(systemName: "star.fill")
-      
-    return cell
-  }
-     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-           
-         let payment = DescriptionViewController()
-                  if let presentationController = payment.presentationController as? UISheetPresentationController {
-                        presentationController.detents = [.medium()] /// set here!
-                     self.present(payment, animated: true)
-                      }
-     }
+  extension TreesCollectionViewController : UICollectionViewDelegate, UICollectionViewDataSource{
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return trees.count
  }
+ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+  let cell = treeCollectionView!.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! TreesCollectionViewCell
+   cell.treeImage.image = UIImage(named: "shatlah")
+   cell.treeLable.text = trees[indexPath.item].newtreeName
+   cell.priceLable.text = trees[indexPath.item].planetPrice
+//
+  return cell
+ }
+   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+     let vc = DescriptionViewController()
+     vc.modalPresentationStyle = .fullScreen
+     present(vc, animated: true, completion: nil)
+   }
+    func loadData() {
+      db.collection("newPlants")
+            .whereField("storeID", isEqualTo: storeID)
+              .getDocuments() {
+               (querySnapshot, error) in
+               if let error = error {
+                print("error heeereee")
+                print(error.localizedDescription)
+               }else {
+                for document in querySnapshot!.documents {
+                 let data = document.data()
+                 let name = data["planetName"] as? String ?? "_"
+                 let price = data["plantPrice"] as? String ?? "_"
+                 let newTree = NewTreeModel(newtreeName: "الإسم:\(name)", plantDescription: "", planetPrice: "السعر:\(price)")
+                 print("###################")
+                 print(self.trees)
+                self.trees.append(newTree)
+               }
+                self.treeCollectionView?.reloadData()
+                }
+               }
+              }
+    }

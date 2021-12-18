@@ -1,13 +1,9 @@
-// StoreCell.swift
-// ShatlahApp
-//
-// Created by Taraf Bin suhaim on 11/05/1443 AH.
-//
 import UIKit
 class StoreCell: UITableViewCell {
   static let id = "cell"
   lazy var storeImage: UIImageView = {
     $0.contentMode = .scaleAspectFill
+    $0.layer.cornerRadius = 10
     $0.clipsToBounds = true
     return $0
   }(UIImageView())
@@ -47,8 +43,8 @@ class StoreCell: UITableViewCell {
     NSLayoutConstraint.activate([
       storeImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
       storeImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-      storeImage.heightAnchor.constraint(equalToConstant: 25),
-      storeImage.widthAnchor.constraint(equalToConstant: 25),
+      storeImage.heightAnchor.constraint(equalToConstant: 65),
+      storeImage.widthAnchor.constraint(equalToConstant: 65),
       stroeName.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
       stroeName.leadingAnchor.constraint(equalTo: storeImage.trailingAnchor, constant: 10),
       stroeName.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
@@ -58,5 +54,3 @@ class StoreCell: UITableViewCell {
     ])
   }
 }
-
-

@@ -1,3 +1,4 @@
+
 import UIKit
 
 struct Store {
@@ -5,6 +6,6 @@ struct Store {
   var storeEmail : String
   var storeID : String?
   var isStore : Bool?
-  var storeimg : UIImage?
   var storedescription : String?
+  var userImageURL: String?
 }
