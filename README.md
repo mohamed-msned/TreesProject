@@ -152,62 +152,78 @@
 
 
 Sign up page -> check on store
+
 <img width="390" alt="Screen Shot 2021-12-19 at 12 33 31 PM" src="https://user-images.githubusercontent.com/92252815/146670898-94ad8313-224f-4b5a-90fd-42f189f6f91e.png">
 
 <img width="381" alt="Screen Shot 2021-12-19 at 12 36 01 PM" src="https://user-images.githubusercontent.com/92252815/146671177-300254da-a33c-4d30-845c-8b97ea126a6b.png">
 
 
 Sign in page -> Store Acoount
+
 <img width="385" alt="Screen Shot 2021-12-19 at 12 33 49 PM" src="https://user-images.githubusercontent.com/92252815/146670789-a81d7ad4-3303-428c-b583-37d59bdf185d.png">
 
 <img width="381" alt="Screen Shot 2021-12-19 at 12 36 01 PM" src="https://user-images.githubusercontent.com/92252815/146671221-c42788f1-e1a7-4eed-89d0-2f3d46361b10.png">
 
 Store Acoount -> add new plant page 🪴 
+
 <img width="389" alt="Screen Shot 2021-12-19 at 12 34 01 PM" src="https://user-images.githubusercontent.com/92252815/146670826-dd37fecc-f9d9-49ee-8608-05c8d2f25790.png">
 <img width="395" alt="Screen Shot 2021-12-19 at 12 34 29 PM" src="https://user-images.githubusercontent.com/92252815/146670845-577df39b-e18a-4f73-a4d7-b2df8ccf5a42.png">
 <img width="386" alt="Screen Shot 2021-12-19 at 12 34 39 PM" src="https://user-images.githubusercontent.com/92252815/146670850-83badfab-1716-47a2-bd7d-31c2426b3b63.png">
 
 Sign out from Store Acoount
+
 <img width="385" alt="Screen Shot 2021-12-19 at 12 34 53 PM" src="https://user-images.githubusercontent.com/92252815/146670871-45f88bce-c3e6-4571-8578-cdc5bd17d5df.png">
 
 
 Sign in page -> Store Acoount -> Volunteer page
+
 <img width="375" alt="Screen Shot 2021-12-19 at 10 49 04 AM" src="https://user-images.githubusercontent.com/92252815/146671107-629aed41-fe88-4257-92bd-ebe0d85bd39c.png">
+
 Sign in page -> Store Acoount -> Volunteer page -> place (location)
+
 <img width="388" alt="Screen Shot 2021-12-19 at 12 38 11 PM" src="https://user-images.githubusercontent.com/92252815/146671390-7cd112b3-c793-4e07-ad21-8d4261a4a253.png">
 
 ------------------------------------------------------------------------------
 # ScreenShots (user Account):
 
 Sign in page
+
 <img width="386" alt="Screen Shot 2021-12-19 at 12 32 35 PM" src="https://user-images.githubusercontent.com/92252815/146670737-758aab22-222a-4bce-a5a6-b52dc2862a3a.png">
 
 Sign up page
+
 <img width="384" alt="Screen Shot 2021-12-19 at 12 32 46 PM" src="https://user-images.githubusercontent.com/92252815/146670759-b4d93827-82f3-49c2-8c45-367d1236e696.png">
 
 Store page(home)
 <img width="390" alt="Screen Shot 2021-12-19 at 12 36 13 PM" src="https://user-images.githubusercontent.com/92252815/146671272-3af78ffe-4575-4605-b9a9-27a8d6ff3f5c.png">
 
 Store page(home) -> select store 
+
 <img width="390" alt="Screen Shot 2021-12-19 at 12 39 26 PM" src="https://user-images.githubusercontent.com/92252815/146671412-ea1f4a6a-09f9-484b-ba4a-202e82df4197.png">
 
 Store page(home) -> select item 
+
 <img width="388" alt="Screen Shot 2021-12-19 at 12 39 37 PM" src="https://user-images.githubusercontent.com/92252815/146671422-87f4b8e1-b59a-4197-94ea-0666f6878590.png">
 
 Store page(home) -> select item -> payment page
+
 <img width="385" alt="Screen Shot 2021-12-19 at 12 39 46 PM" src="https://user-images.githubusercontent.com/92252815/146671457-73a1ac83-3288-433c-b070-ff7ca554372c.png">
 <img width="385" alt="Screen Shot 2021-12-19 at 12 39 54 PM" src="https://user-images.githubusercontent.com/92252815/146671484-00aff03f-619d-4f08-819a-93fbc7023341.png">
 
 Store page(home) -> select item -> payment page -> chat page
+
 ![IMG_0828](https://user-images.githubusercontent.com/92252815/146671926-7c7a4ee6-08c3-430c-87c7-aa6d355c3945.PNG)
 
 Statistics page
+
 <img width="385" alt="Screen Shot 2021-12-19 at 12 36 21 PM" src="https://user-images.githubusercontent.com/92252815/146671281-517a0243-9f42-47ca-b938-e24995ac8686.png">
 
 user Account -> Profile page
+
 <img width="384" alt="Screen Shot 2021-12-19 at 12 36 28 PM" src="https://user-images.githubusercontent.com/92252815/146671315-af9f9d48-9bd3-43a1-a351-0ca0092b3fa1.png">
 
 user Account -> Profile page -> contact with us -> Twitter Account 
+
 ![Uploading Screen Shot 2021-12-19 at 12.36.43 PM.png…]()
 
 <img width="386" alt="Screen Shot 2021-12-19 at 12 36 53 PM" src="https://user-images.githubusercontent.com/92252815/146671349-cb48de09-055b-4f6c-8798-c5f104e31f69.png">
