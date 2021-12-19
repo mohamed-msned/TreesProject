@@ -195,6 +195,7 @@ Sign up page
 <img width="384" alt="Screen Shot 2021-12-19 at 12 32 46 PM" src="https://user-images.githubusercontent.com/92252815/146670759-b4d93827-82f3-49c2-8c45-367d1236e696.png">
 
 Store page(home)
+
 <img width="390" alt="Screen Shot 2021-12-19 at 12 36 13 PM" src="https://user-images.githubusercontent.com/92252815/146671272-3af78ffe-4575-4605-b9a9-27a8d6ff3f5c.png">
 
 Store page(home) -> select store 
