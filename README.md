@@ -110,9 +110,13 @@
 # Future Work:
 
 . we can canceled the orders 
+
 . we can make the Archive of all customer orders 
+
 . we can add the more Kind of Plants
+
 . We can prepare an order by pre-booking the user at any time he prefers
+
 . we want to make the app is available in app store As soon 💪🏼
 
 --------------------------------------------------------------------------
@@ -141,16 +145,6 @@
 
 
 ![1AA987D8-6D01-49DF-A15B-86D7E2D9BEC3](https://user-images.githubusercontent.com/92252951/146664918-6efd09eb-d80f-4bce-b870-004d2e9a7a02.jpeg)
-
-
-
-
-
-
-
-
-
-# The App Video:
 
 
 
