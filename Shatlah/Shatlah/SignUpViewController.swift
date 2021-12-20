@@ -9,12 +9,10 @@ class SignUpViewController: UIViewController {
 //    var checked = false
     let db = Firestore.firestore()
     
-    // *************************************************
     let email = UITextField()
     //    let firstName = UITextField()
     let fullName = UITextField()
     let password = UITextField()
-    //    let textField5 = UITextField()
     var stste = false
     
     let button = UIButton()
@@ -80,9 +78,7 @@ class SignUpViewController: UIViewController {
         view.addSubview(imageView3)
         
         //first label (email)
-//        label1.frame = CGRect(x: 45, y: 400, width: 200, height: 50)
         label1.text = "البريد الالكتروني"
-//        label1.frame = CGRect(x: 45, y: 370, width: 200, height: 50)
 
         label1.frame = CGRect(x: 230, y: 370, width: 200, height: 50)
 //        label1.text = "Email"
@@ -226,7 +222,7 @@ class SignUpViewController: UIViewController {
                             print("error while creating user")
                             print(error)
                         }else{
-                            let tabView = DashboardTabBarController()
+                            let tabView = PivotViewController()
                             tabView.modalPresentationStyle = .fullScreen
                             self.present(tabView, animated: true, completion: nil)
                         }

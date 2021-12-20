@@ -21,7 +21,6 @@ class DashboardTabBarController: UITabBarController, UITabBarControllerDelegate 
         let item1 = StoreViewController()
         let item2 = UserProfileController()
         let item3 = StatisticsViewController()
-       // let item4 = ProfileViewController()
 
         
         let icon1 = UITabBarItem(title: "متاجر", image: UIImage(systemName: "cart"), selectedImage: UIImage(systemName: "cart"))
@@ -38,7 +37,7 @@ class DashboardTabBarController: UITabBarController, UITabBarControllerDelegate 
 //      //  item4.tabBarItem = icon4
       
        
-        let controllers = [item2,item3,item1]
+        let controllers = [item1,item3,item2]
         self.viewControllers = controllers
         
     }

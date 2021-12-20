@@ -15,10 +15,13 @@ class StoreProfilePageViewController: UIViewController {
         view.clipsToBounds = true
         return view
     }()
-    
+
     lazy var addBtn : UIButton = {
         let add = UIButton()
-        $0.setTitle("Add", for: .normal)
+        $0.setTitle("اضافه", for: .normal)
+        $0.backgroundColor = .white
+        $0.tintColor = #colorLiteral(red: 0.2691704333, green: 0.3360689282, blue: 0.2908776999, alpha: 1)
+        $0.layer.cornerRadius = 20
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.addTarget(self, action: #selector(addPlanet), for: .touchDown)
         return $0
@@ -55,12 +58,38 @@ class StoreProfilePageViewController: UIViewController {
 
     let signOutButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Sign out", for: .normal)
+        button.setTitle("تسجيل الخروج", for: .normal)
+        button.backgroundColor = .white
+        button.layer.cornerRadius = 20
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(louOut), for: .touchDown)
+        button.tintColor = #colorLiteral(red: 0.2691704333, green: 0.3360689282, blue: 0.2908776999, alpha: 1)
         return button
     }()
 
 
+    //buttonacttion
+    @objc func louOut(){
+        
+        let LoginViewController = LoginViewController()
+        let alert = UIAlertController(title: nil, message: "هل أنت متأكد تريد تسجيل الخروج ؟", preferredStyle: .alert)
+        let action = UIAlertAction(title: "تسجيل الخروج", style: .destructive) {_ in
+            do {
+                try Auth.auth().signOut()
+                LoginViewController.modalPresentationStyle = .fullScreen
+                self.present(LoginViewController, animated: true, completion: nil)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        
+        alert.addAction(action)
+        alert.addAction(UIAlertAction(title: "الغاء", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
+    //---------
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemGray6
@@ -115,6 +144,7 @@ class StoreProfilePageViewController: UIViewController {
         containerView.addSubview(addBtn)
         addBtn.topAnchor.constraint(equalTo:userEmailLabel.bottomAnchor, constant: 20).isActive = true
         addBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        addBtn.widthAnchor.constraint(equalToConstant: 100).isActive = true
         containerView.addSubview(signOutButton)
 
         signOutButton.topAnchor.constraint(equalTo: addBtn.bottomAnchor, constant: 20).isActive = true
@@ -137,7 +167,7 @@ class StoreProfilePageViewController: UIViewController {
         imagePicker.allowsEditing = true
         present(imagePicker, animated: true)
     }
-    
+
     @objc func imageTapped() {
         print("Image tapped")
         setupImagePicker()
@@ -269,3 +299,5 @@ extension StoreProfilePageViewController: UIImagePickerControllerDelegate, UINav
 
 
 }
+
+

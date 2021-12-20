@@ -3,7 +3,7 @@
 import UIKit
 import Firebase
 class TreesCollectionViewController: UIViewController {
-
+var p = 0
     var storeID = ""
   let db = Firestore.firestore()
   var trees = [NewTreeModel]()
@@ -29,6 +29,7 @@ class TreesCollectionViewController: UIViewController {
     treeCollectionView!.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
     ])
      loadData()
+       print("@@@@@", p)
        print(storeID)
    }
   }
@@ -46,6 +47,8 @@ class TreesCollectionViewController: UIViewController {
  }
    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
      let vc = DescriptionViewController()
+       
+       vc.price = p
      vc.modalPresentationStyle = .fullScreen
      present(vc, animated: true, completion: nil)
    }
@@ -62,6 +65,8 @@ class TreesCollectionViewController: UIViewController {
                  let data = document.data()
                  let name = data["planetName"] as? String ?? "_"
                  let price = data["plantPrice"] as? String ?? "_"
+                    print("######",price)
+                    self.p = Int(price) ?? 0
                  let newTree = NewTreeModel(newtreeName: "الإسم:\(name)", plantDescription: "", planetPrice: "السعر:\(price)")
                  print("###################")
                  print(self.trees)

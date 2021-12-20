@@ -15,7 +15,7 @@ class StoreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        title = "Store"
+        title = "المتاجر"
         uiSettengs()
         getData()
     }

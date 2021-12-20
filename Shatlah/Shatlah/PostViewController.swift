@@ -66,8 +66,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
       plantDescription.font = UIFont(name: "GillSans-Italic", size: 20)
       plantDescription.textAlignment = .right
       plantDescription.layer.cornerRadius = 20
-     // let textField1Image2 = UIImage(systemName: "highlighter")
-   //   ImgeInTextField(textField: plantDescription, fieldImge: textField1Image2!)
+
       view.addSubview(plantDescription)
       PostButton.frame = CGRect(x: 220, y: 120, width: 130, height: 40)
       PostButton.layer.cornerRadius = 20
@@ -181,8 +180,6 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
       self.view.endEditing(true)
     }
     @objc func xButton(){
-      // let VC = profile() // profile class
-  //    VC.modalPresentationStyle = .fullScreen
-  //    self.present(VC, animated: true , completion: nil)
+
     }
   }

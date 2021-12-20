@@ -24,8 +24,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
 
-        window?.rootViewController = navigationController
-
+//        window?.rootViewController = navigationController
+        window?.rootViewController = animationscreen()
+//        window?.rootViewController = StoreProfilePageViewController()
         window?.makeKeyAndVisible()
 /////////////
         ///
